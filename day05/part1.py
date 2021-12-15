@@ -12,15 +12,15 @@ with open("input.txt") as f:
             continue
 
         if y1 == y2:
-            for x in range(min(x1,x2), max(x1,x2)+1):
+            for x in range(min(x1, x2), max(x1, x2) + 1):
                 counts[(x, y1)] += 1
 
         if x1 == x2:
-            for y in range(min(y1,y2), max(y1,y2)+1):
+            for y in range(min(y1, y2), max(y1, y2) + 1):
                 counts[(x1, y)] += 1
 
 tot = 0
-for x,y in counts:
-    if counts[(x,y)] > 1:
+for x, y in counts:
+    if counts[(x, y)] > 1:
         tot += 1
 print(tot)

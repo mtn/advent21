@@ -15,6 +15,3 @@ gamma = int("".join(g), 2)
 epsilon = int("".join(e), 2)
 
 print(gamma * epsilon)
-
-
-

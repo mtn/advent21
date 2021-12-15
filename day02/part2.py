@@ -12,6 +12,4 @@ with open("input.txt") as f:
         elif line.startswith("up"):
             aim -= num
 
-print(x*y)
-
-
+print(x * y)

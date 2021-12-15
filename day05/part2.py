@@ -1,4 +1,3 @@
-
 from collections import defaultdict
 
 counts = defaultdict(int)
@@ -10,23 +9,23 @@ with open("input.txt") as f:
         x2, y2 = map(int, r.split(","))
 
         if x1 != x2 and y1 != y2:
-            assert abs(x1-x2) == abs(y1-y2)
-            steps = abs(x1-x2) + 1
+            assert abs(x1 - x2) == abs(y1 - y2)
+            steps = abs(x1 - x2) + 1
             dx = -1 if x1 > x2 else 1
             dy = -1 if y1 > y2 else 1
             for step in range(steps):
-                counts[(x1+dx*step,y1+dy*step)] += 1
+                counts[(x1 + dx * step, y1 + dy * step)] += 1
 
         elif y1 == y2:
-            for x in range(min(x1,x2), max(x1,x2)+1):
+            for x in range(min(x1, x2), max(x1, x2) + 1):
                 counts[(x, y1)] += 1
 
         elif x1 == x2:
-            for y in range(min(y1,y2), max(y1,y2)+1):
+            for y in range(min(y1, y2), max(y1, y2) + 1):
                 counts[(x1, y)] += 1
 
 tot = 0
-for x,y in counts:
-    if counts[(x,y)] > 1:
+for x, y in counts:
+    if counts[(x, y)] > 1:
         tot += 1
 print(tot)

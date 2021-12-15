@@ -7,4 +7,3 @@ for d1, d2 in zip(depths, depths[3:]):
         inc += 1
 
 print(inc)
-

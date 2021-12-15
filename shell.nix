@@ -10,6 +10,7 @@ stdenv.mkDerivation rec {
     py
     py.pkgs.pip
     py.pkgs.numpy
+    py.pkgs.black
   ];
 
   shellHook = ''

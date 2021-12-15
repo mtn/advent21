@@ -34,4 +34,4 @@ assert len(ox) == len(co) == 1
 nox = int(lines[list(ox)[0]], 2)
 nco = int(lines[list(co)[0]], 2)
 
-print(nox*nco)
+print(nox * nco)
